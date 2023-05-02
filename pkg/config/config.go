@@ -7,14 +7,14 @@ import (
 
 type Config struct {
 	DBHost     string `mapstructure:"DB_HOST"`
-	DBName     string `mapstructure:"DB_NAME"`
 	DBUser     string `mapstructure:"DB_USER"`
+	DBName     string `mapstructure:"DB_NAME"`
 	DBPort     string `mapstructure:"DB_PORT"`
 	DBPassword string `mapstructure:"DB_PASSWORD"`
 }
 
 var envs = []string{
-	"DB_HOST", "DB_NAME", "DB_USER", "DB_PORT", "DB_PASSWORD",
+	"DB_HOST", "DB_USER", "DB_NAME", "DB_PORT", "DB_PASSWORD",
 }
 
 func LoadConfig() (Config, error) {
